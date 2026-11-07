@@ -1,0 +1,88 @@
+body{font-size:14px}.nav{min-height:64px}.report-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0 12px}.report-heading h1{font-size:29px;margin:3px 0}.report-heading p{margin:0}.report-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.report-nav [aria-current]{background:var(--deep);color:white}.btn{min-height:38px;padding:7px 14px;font-size:12px}.report-card{border:1px solid var(--line);background:white;border-radius:16px;padding:18px 22px;margin:12px 0}section.report-card{padding:18px 22px}.filters-form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.filters-form label{display:grid;gap:5px;font-size:12px;font-weight:bold;flex:1;min-width:150px}input,select{width:100%;font:inherit;color:var(--ink);background:white;border:1px solid #cbdaf0;border-radius:9px;padding:9px;min-height:41px}.report-summary{display:flex;justify-content:space-between;align-items:center;gap:20px}.report-summary h2{font-size:20px}.report-summary p{margin:2px 0;color:var(--muted);font-size:13px}.total{display:grid;text-align:center;padding:8px 28px;background:var(--pale);border-radius:13px;min-width:210px}.total strong{font-size:29px;color:var(--brand)}.total span{font-size:12px}h2{font-size:20px;margin:0 0 10px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--line);overflow-wrap:anywhere}th{background:#edf3fd}tfoot{font-weight:bold}#error{color:#b32838}.storage-note{font-size:11px;color:var(--muted)}.back-section{padding:12px 0 22px}@media(max-width:680px){.report-heading{align-items:start}.report-heading h1{font-size:23px}.report-heading .btn{font-size:10px;padding:8px}.navlinks{display:none}.report-summary{display:block}.total{margin-top:12px}.report-card,section.report-card{padding:14px}.table-wrap table{min-width:510px}}@media print{header,.report-nav,#filters,.back-section,.storage-note,.report-heading>a{display:none!important}body{background:white;color:black}.wrap{width:100%}.report-card,section.report-card{border:0;padding:8px 0;box-shadow:none}.table-wrap{overflow:visible}table{min-width:0!important}thead{display:table-header-group}tr{break-inside:avoid}.total{background:#f2f2f2!important}.report-summary{break-inside:avoid}.report-heading{padding:0}.report-heading h1{font-size:24px}@page{size:A4;margin:12mm}}
+.annual-report #summarySection table{min-width:1180px;font-size:12px;white-space:nowrap}.annual-report #summarySection th,.annual-report #summarySection td{padding:9px 8px;text-align:center}.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{text-align:right;white-space:normal;min-width:145px;position:sticky;right:0;background:#f5f8ff}.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{font-weight:bold;background:#eaf2ff}.annual-report #summarySection tfoot td{font-weight:bold;background:#eaf2ff}.annual-report .table-wrap{margin-top:8px}@media print{@page{size:A4 landscape;margin:9mm}.annual-report #summarySection table{min-width:0;width:100%;font-size:9px;white-space:normal}.annual-report #summarySection th,.annual-report #summarySection td{padding:5px 3px}.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{position:static;min-width:85px}.annual-report #detailsSection{break-before:page}}
+
+.annual-table-heading{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.annual-table-heading strong{font-size:14px;color:var(--brand)}@media print{.annual-report .report-heading,.annual-report .report-summary,.annual-report #empty,.annual-report #detailsSection,.annual-report #summarySection>.storage-note{display:none!important}.annual-report #summarySection{margin:0;padding:0!important;break-inside:avoid}.annual-report .annual-table-heading{margin-bottom:9px}.annual-report .annual-table-heading h2{font-size:19px;margin:0}.annual-report .annual-table-heading strong{font-size:12px;color:black}.annual-report #summarySection table{font-size:9px;table-layout:fixed}.annual-report #summarySection th,.annual-report #summarySection td{padding:4px 2px;line-height:1.35;overflow-wrap:anywhere}.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{width:15%;min-width:0}.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{width:8%}.annual-report #summarySection .table-wrap{overflow:visible;margin:0}.annual-report #error{display:none}.annual-report #summarySection tfoot{display:table-row-group}}
+
+/* Larger annual figures and full-height landscape print layout. */
+.annual-report #summarySection table{font-size:13px}.annual-report #summarySection td{font-weight:700;font-variant-numeric:tabular-nums;color:#142b48}.annual-report #summarySection th{font-weight:700}@media print{.annual-report #summarySection table{height:174mm;font-size:13px;border:1px solid #9eacbd}.annual-report #summarySection th,.annual-report #summarySection td{padding:5px 2px;line-height:1.3;font-weight:700;vertical-align:middle;border:1px solid #b8c3d0;color:#000}.annual-report #summarySection thead tr{height:10mm}.annual-report #summarySection tfoot tr{height:10mm}.annual-report .annual-table-heading{min-height:10mm;margin-bottom:3mm;flex-wrap:nowrap}.annual-report .annual-table-heading h2{font-size:20px;font-weight:700}.annual-report .annual-table-heading strong{font-size:14px;font-weight:700;white-space:nowrap}.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{width:16%}.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{width:8.5%}}
+
+/* Separate report selection and results pages. */
+[hidden]{display:none!important}
+.report-output-actions{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:12px 0 18px}
+@media print{.report-output-actions{display:none!important}}
+
+/* Details precede totals, including annual printing. */
+@media print{
+.annual-report #detailsSection:not([hidden]){display:block!important;break-before:auto}
+.annual-report #summarySection{break-before:page}
+.annual-report #reportResult>.report-summary{display:flex!important}
+.annual-report #summarySection table{height:auto}
+.annual-report #summarySection th,.annual-report #summarySection td{color:#000!important;background:#fff!important}
+}
+
+/* Annual report is a monthly totals matrix only. */
+.annual-report #detailsSection{display:none!important}
+@media print{.annual-report #summarySection{break-before:auto}}
+
+/* Readable whole-pound report amounts; underlying amounts keep their cents. */
+#detailsRows td:last-child,#summaryRows td:not(:first-child),#annualTotals td:not(:first-child){font-weight:700;font-variant-numeric:tabular-nums}
+@media screen{.annual-report #summarySection table{min-width:1080px;font-size:14px}.annual-report #summarySection td,.annual-report #summarySection th{padding:9px 5px}}
+@media print{
+table{font-size:12px}td,th{color:#000!important}td:last-child,tfoot td,tfoot th{font-weight:800}
+.annual-report #summarySection table{font-size:14px;border:1px solid #555}
+.annual-report #summarySection th,.annual-report #summarySection td{font-weight:800;padding:5px 3px;line-height:1.35;border:1px solid #888;overflow-wrap:normal}
+.annual-report #summarySection td:not(:first-child){white-space:nowrap}
+.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{width:20%}
+.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{width:9%}
+.annual-report #summarySection>.storage-note{display:block!important;color:#000;font-size:9px;margin:3px 0 5px}
+}
+
+/* Fit all annual columns; narrow labels and totals. */
+.annual-report #summarySection table{width:100%;min-width:0;table-layout:fixed;white-space:normal}
+.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{width:12%;min-width:0;position:static;overflow-wrap:anywhere}
+.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{width:7%}
+.annual-report #summarySection th,.annual-report #summarySection td{padding:7px 3px}
+.annual-report #summarySection td:not(:first-child){white-space:nowrap}
+@media(max-width:700px){.annual-report #summarySection table{min-width:850px}}
+@media print{.annual-report #summarySection table{min-width:0;font-size:13px}.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{width:12%;min-width:0}.annual-report #summarySection th:last-child,.annual-report #summarySection td:last-child{width:7%}.annual-report #summarySection th,.annual-report #summarySection td{padding:5px 2px}}
+
+/* Keep full expense names readable within the narrow annual label column. */
+.annual-report #summarySection td:first-child,.annual-report #summarySection th:first-child{font-size:11px;line-height:1.45;white-space:normal;word-break:normal;overflow-wrap:break-word;text-align:right;vertical-align:middle;padding:6px 5px}
+.annual-report #summarySection th,.annual-report #summarySection td{vertical-align:middle}
+@media print{
+@page{size:A4 landscape;margin:8mm}
+.annual-report #summarySection{padding:0!important;margin:8px 0;break-inside:avoid}
+.annual-report #summarySection table{width:100%;table-layout:fixed;font-size:13px;height:auto}
+.annual-report #summarySection td:first-child,.annual-report #summarySection th:first-child{width:12%;font-size:10px;line-height:1.4;white-space:normal;word-break:normal;overflow-wrap:break-word;padding:5px 4px}
+.annual-report #summarySection td:last-child,.annual-report #summarySection th:last-child{width:7%}
+.annual-report #summarySection thead tr,.annual-report #summarySection tfoot tr{height:auto}
+.annual-report #summarySection .table-wrap{overflow:visible}
+.annual-report #summarySection td,.annual-report #summarySection th{vertical-align:middle}
+}
+
+/* One clear annual print heading; the monthly matrix carries its own total. */
+@media print{
+.annual-report #reportResult>.report-summary{display:none!important}
+.annual-report #summarySection{break-before:auto;margin:0;max-width:100%}
+.annual-report #summarySection>.storage-note{display:block!important}
+.annual-report main.wrap{padding:0;width:100%}
+}
+
+/* Keep the expense label visible while browsing annual months on phones. */
+@media screen and (max-width:700px){
+.annual-report #summarySection .table-wrap{overflow-x:auto;isolation:isolate}
+.annual-report #summarySection th:first-child,.annual-report #summarySection td:first-child{position:sticky;right:0;inset-inline-start:0;z-index:2;width:110px;min-width:110px;max-width:110px;background:#1a3353;color:#e0edff;box-shadow:-3px 0 5px #0004}
+.annual-report #summarySection thead th:first-child{z-index:3}
+.annual-report #summarySection tfoot td:first-child{background:#234265}
+}
+
+/* Keep summaries first and fit more rows on each screen and printed page. */
+body[data-report] #reportResult .report-card{margin-block:8px;padding:10px 12px}
+body[data-report] #reportResult th,body[data-report] #reportResult td{padding-block:4px;line-height:1.45}
+body[data-report] #reportResult .report-card h2{margin-block:0 6px}
+body.annual-report #detailsSection:not([hidden]){display:block!important}
+@media print{
+body.annual-report #detailsSection:not([hidden]){break-before:page}
+body[data-report] #detailsSection{break-inside:auto}
+body[data-report] #detailsSection tr{break-inside:avoid}
+}

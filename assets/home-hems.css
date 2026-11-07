@@ -1,0 +1,65 @@
+@media screen{
+:root{color-scheme:dark;--bg:#09111f;--ink:#edf3ff;--muted:#b8c9df;--brand:#8bbcff;--deep:#2864dc;--pale:#192e49;--line:#2b4260}
+body{background:radial-gradient(ellipse at 90% 0,#18365d66,transparent 50%),var(--bg)}header{background:#101f35ef;border-color:var(--line)}.brand{font-size:14px}.brand img{object-fit:contain}.brand small{font-size:10px;color:var(--muted)}.nav{min-height:72px}.entry-card,.records-card,.report-card,dialog{background:#122238;color:var(--ink);border-color:var(--line)}input,select{background:#0b182b!important;color:var(--ink)!important;border-color:#3e5c80!important}th{background:#1a3353;color:#c7ddff}tbody tr:hover{background:#1b314b}.btn{background:#2864dc;color:white;border-color:#4483ef}.btn.light{background:#1b3452;color:#e0edff;border-color:#395c86}.btn.light:hover{background:#284c77}.delete-btn{color:#ffb3b8!important}.status{background:#1d395c;color:#cce2ff}.empty{color:var(--muted)}.total,.report-summary .total{background:#192e49}.entry-side{background:#163354}.storage-note{color:var(--muted)}#feedback{color:#9cdbb9}#feedback.error,#categoryError,#error{color:#ffb3b8}.app-heading h1{font-size:29px}dialog::backdrop{background:#020b17ba}.entry-layout{grid-template-columns:1fr}.backup-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0 14px}.backup-tools .btn{font-size:11px;min-height:35px;padding:6px 12px}.backup-tools small{color:var(--muted);font-size:11px}.household-total{font-size:13px;color:#dceaff;margin-inline-start:auto}.household-total strong{font-size:18px;color:#a9cdff}.report-heading .btn,.app-heading .status{flex-shrink:0}.breadcrumb{font-size:11px}.records-card{padding:16px}.entry-card{padding:18px}#homeHelp{margin:12px 0;padding:12px 16px;background:#122238;border:1px solid var(--line);border-radius:12px}#homeHelp summary{cursor:pointer;font-size:12px;font-weight:bold;color:#b8d8ff}#homeHelp p{font-size:12px;color:var(--muted);margin:8px 0;line-height:1.9}@media(max-width:650px){.nav{flex-wrap:wrap;gap:6px;padding:10px 0}.navlinks{gap:12px;width:100%;justify-content:space-between;font-size:11px}.app-heading{padding:14px 0}.app-heading h1{font-size:26px}.household-total{width:100%;margin:4px 0}.category-row{flex-wrap:wrap}.category-row select{flex-basis:100%}}
+}
+.household-top{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:62px}.household-top .brand{font-size:16px}.household-top>.btn{font-size:11px;min-height:34px;padding:5px 12px}.household-nav{display:flex;gap:8px;padding-top:0;padding-bottom:10px;align-items:center;flex-wrap:wrap}.household-nav a{display:inline-flex;align-items:center;justify-content:center;padding:7px 16px;border:1px solid var(--line);border-radius:8px;font-size:12px;font-weight:bold;min-height:36px}.household-nav a[aria-current="page"]{background:#2864dc;color:#fff;border-color:#4882e6}.household-nav a:hover{background:#234265;color:#fff}.household-nav a:focus-visible{outline:2px solid #99c5ff;outline-offset:3px}@media(max-width:600px){.household-top .brand{font-size:14px}.household-nav{gap:6px}.household-nav a{flex:1 1 auto;padding:6px 10px;font-size:11px}}@media print{.household-top,.household-nav{display:none!important}}
+
+.household-nav{align-items:center}
+.household-report-group{margin:0;padding:4px 10px 9px;border:1px solid #4b739f;border-radius:11px;min-width:0;background:rgba(35,66,101,.22)}
+.household-report-group legend{padding:0 8px;color:#b9d9ff;font-size:12px;font-weight:800}
+.household-report-links{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:600px){.household-report-group{flex:1 1 100%;padding:4px 7px 7px}.household-report-links{gap:6px}}
+
+#feedback:not(:empty){display:block;padding:9px 14px;background:#123d35;border:1px solid #32735e;border-radius:9px;font-size:14px;font-weight:700;color:#c0f4d8}
+#feedback.error:not(:empty){background:#422332;border-color:#8e455b;color:#ffbcc5}
+
+/* Entries and saved records have separate screens. */
+body:not(.records-page) .records-card{display:none}
+.records-page .app-heading,.records-page .backup-tools,.records-page #homeHelp,.records-page .entry-layout,.records-page .home-app>.storage-note{display:none}
+.records-page .records-card{margin-top:16px}
+.records-page .table-scroll{max-height:calc(100dvh - 290px)}
+/* Keep report output focused on the chosen data. */
+body.report-output>header,body.report-output .report-heading,body.report-output main>.storage-note{display:none}
+body.report-output main{padding-top:10px}
+body.report-output .report-output-actions{margin:0 0 10px}
+body.report-output .report-summary{padding:12px 18px}
+
+@media screen{
+.annual-report #summarySection td{color:#e0edff;background:#122238}
+.annual-report #summarySection th{color:#e0edff;background:#1a3353}
+.annual-report #summarySection td:first-child,.annual-report #summarySection th:first-child{color:#e0edff;background:#1a3353}
+.annual-report #summarySection td:last-child,.annual-report #summarySection th:last-child,.annual-report #summarySection tfoot td{color:#e0edff;background:#234265}
+}
+
+/* Consistent keyboard focus, disabled actions and compact category tools. */
+.btn:disabled,button:disabled{opacity:.48;cursor:not-allowed;box-shadow:none}
+.btn:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #91bfff;outline-offset:3px}
+#renameCategoryError{color:#ffb3b8;font-size:12px}
+@media(max-width:750px){.category-row{display:flex!important;flex-wrap:wrap}.category-row select{flex:1 1 100%;width:100%}.category-row .btn{flex:1 1 auto}.household-top{gap:8px}.household-nav a{min-height:38px}}
+.record-filters{display:grid;grid-template-columns:1.2fr 1fr 1fr 1.5fr;gap:10px;align-items:end;margin-bottom:10px}.record-filters label{display:grid;gap:5px;margin:0;font-size:12px}.record-filters input,.record-filters select{width:100%;min-width:0;min-height:38px}.record-filter-actions{grid-column:1/-1;display:flex;gap:8px}.record-filter-actions .btn{min-height:34px;font-size:12px;padding:5px 14px}.record-results-summary{font-size:12px;color:#b9d7ff;margin:8px 0}.record-results-summary:empty,#recordFilterError:empty{display:none}#recordFilterError{color:#ffb3b8;font-size:12px}.records-page .table-scroll{max-height:calc(100dvh - 440px);min-height:160px}@media(max-width:750px){.record-filters{grid-template-columns:1fr 1fr}.record-filters label:first-child,.record-filters .record-search{grid-column:1/-1}.records-page .table-scroll{max-height:60vh}}
+
+@media screen{
+body:has(.household-top)>header{position:sticky;top:0;z-index:20;background:#0f1e31}
+body.report-output>header{display:block}
+body.report-output>header .household-nav{display:none}
+body.report-output .household-top{min-height:48px}
+}
+
+/* Readable, consistent validation messages throughout the household app. */
+:where(body) :is(#feedback,#recordFilterError,#categoryError,#renameCategoryError,#error,[role="alert"]):not(:empty){
+  box-sizing:border-box;padding:7px 10px;margin-block:8px;border-radius:8px;
+  border:1px solid #9b6450;border-inline-start:3px solid #ffb68e;
+  background:#392821;color:#ffe3d1;font-size:13px;font-weight:600;line-height:1.55;
+}
+body #feedback:not(.error):not(:empty){
+  background:#17362e;color:#d6f8e6;border-color:#467c65;border-inline-start-color:#85ddb3;
+}
+
+body #feedback.save-confirmation:not(.error):not(:empty){
+  position:fixed;z-index:30;inset-inline:0;bottom:20px;
+  width:max-content;max-width:calc(100% - 32px);margin:0 auto;
+  padding:10px 22px;border:1px solid #88d9a8;border-radius:12px;
+  background:#174536;color:#effff4;font-size:16px;font-weight:800;
+  text-align:center;box-shadow:0 6px 20px #0006;pointer-events:none;
+}
+#feedback.save-confirmation:not(:empty)::before{content:"✓";margin-inline-end:8px;color:#a7efbf}

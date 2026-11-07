@@ -1,0 +1,27 @@
+/* Compact section layouts with the return action at the top. */
+[data-site-panel]:not(#homePanel){min-height:0;padding:16px 0 20px}[data-site-panel]>.panel-return{margin:0 0 12px;padding:0;border:0}.panel-return .btn{min-height:35px;padding:6px 14px;font-size:12px}.section-head{margin-bottom:14px;align-items:center}.section-head h2{font-size:25px;margin:4px 0}.section-head>p{font-size:12px;line-height:1.7}.feature-grid{gap:12px}.feature-card{min-height:0;padding:15px 17px;border-radius:14px}.feature-number{width:30px;height:30px;margin-bottom:6px;font-size:11px}.feature-card h3{font-size:15px;margin:0 0 3px}.feature-card p{font-size:12px;line-height:1.7}.comparison th{padding:8px 14px;font-size:13px}.comparison th small{margin-top:0}.comparison td{padding:7px 14px;font-size:12px;line-height:1.55}.comparison-wrap{border-radius:14px}.faqs{gap:8px}.faqs details{padding:12px 17px}.faqs summary{font-size:13px}.faqs p{margin:8px 0 0;line-height:1.75}.contact{padding:26px}.contact h2{font-size:23px}.about{padding:23px}.about h2{font-size:23px}.about-item{padding-bottom:7px}.about-items{gap:8px}@media(max-width:780px){[data-site-panel]:not(#homePanel){padding:12px 0 18px}.section-head h2{font-size:22px}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-card{padding:13px}.comparison th,.comparison td{padding:7px 9px}.contact{padding:22px}.panel-return{margin-bottom:10px!important}}@media(max-width:480px){.feature-grid{grid-template-columns:1fr}.feature-card{padding:12px}.feature-number{display:inline-flex;vertical-align:middle;margin:0 0 5px 8px}.feature-card h3{display:inline;vertical-align:middle}.feature-card p{margin-top:3px}.faqs details{padding:11px 13px}.section-head h2{font-size:21px}.comparison{min-width:500px}}
+
+/* Comparison return follows the table; tighter desktop layout. */
+#comparison>.panel-return{margin:10px 0 0;padding:0;display:flex;justify-content:center}#comparison .section-head{margin-bottom:10px}#comparison .section-head h2{font-size:24px}#comparison .comparison td{padding-top:6px;padding-bottom:6px}#comparison .comparison th{padding-top:7px;padding-bottom:7px}
+
+/* Desktop comparison occupies exactly the viewport, with no page scrolling. */
+@media screen and (min-width:900px) and (min-height:560px){
+html.comparison-fixed{height:100%;overflow:hidden;overscroll-behavior:none}
+body.comparison-fixed{height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column;overscroll-behavior:none}
+body.comparison-fixed>header,body.comparison-fixed>footer{flex:0 0 auto}
+body.comparison-fixed>main.wrap{flex:1 1 0;min-height:0;margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;overflow:hidden}
+body.comparison-fixed #comparison{height:100%;min-height:0;padding:8px 0;display:flex;flex-direction:column;gap:6px;box-sizing:border-box}
+body.comparison-fixed #comparison .section-head{flex:0 0 auto;margin:0}
+body.comparison-fixed #comparison .section-head h2{font-size:22px;line-height:1.3;margin:2px 0}
+body.comparison-fixed #comparison .eyebrow{font-size:10px;line-height:1.3}
+body.comparison-fixed #comparison .comparison-wrap{flex:1 1 0;min-height:0;overflow:hidden}
+body.comparison-fixed #comparison table{height:100%;min-width:0;table-layout:fixed}
+body.comparison-fixed #comparison th,body.comparison-fixed #comparison td{padding:3px 10px;font-size:clamp(10px,1.4vh,12px);line-height:1.35;overflow-wrap:anywhere}
+body.comparison-fixed #comparison th small{font-size:10px;line-height:1.3}
+body.comparison-fixed #comparison>.panel-return{flex:0 0 auto;margin:0!important;padding:0;justify-content:flex-start}
+body.comparison-fixed #comparison>.panel-return .btn{min-height:30px;padding:4px 13px;line-height:1.5;font-size:11px}
+body.comparison-fixed>footer .footer-inner{padding-top:6px;padding-bottom:6px;font-size:10px}
+}
+
+/* Return action at the physical left edge in the RTL comparison page. */
+#comparison>.panel-return{justify-content:flex-end!important}

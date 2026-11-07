@@ -1,0 +1,30 @@
+/* Shared presentation for the three HEMS products. */
+:root{--hems-accent:#82b4ff;--hems-button:#2864dc;--hems-border:#2b4260}
+body{font-family:Tahoma,Arial,sans-serif}
+header .hems-brand{display:flex;align-items:center;gap:10px;direction:ltr;color:#edf3ff;font-size:18px;font-weight:700;text-decoration:none;flex-shrink:0;line-height:1.5}
+header .hems-brand img{display:block;width:48px;height:48px;object-fit:contain}
+header .hems-brand small{display:block;font-family:Arial,sans-serif;font-size:10px;font-weight:400;letter-spacing:1.7px;color:#b8c9df}
+.navlinks a{font-weight:700}.navlinks a:focus-visible,.btn:focus-visible{outline:2px solid #a9cfff;outline-offset:3px}
+.btn{font-family:inherit;border-radius:10px;font-weight:700}
+a.btn:not(.light):not(.secondary){background:var(--hems-button);color:#fff;border:1px solid #4483ed}
+.storefront .product-card{border-radius:18px;border-color:var(--hems-border)}
+.storefront .product-title{align-items:flex-start;min-height:55px}
+.storefront .product-title h2{font-size:21px;font-weight:800;line-height:1.5;color:#edf3ff}
+.storefront .product-title h2 small{display:block;font-size:11px;line-height:1.4;color:#b8c9df;font-weight:400}
+.storefront .badge{font-size:10px;font-weight:700;padding:3px 8px;color:#cce2ff;background:#3376db22;border:1px solid #6598df55;border-radius:20px}
+.storefront .product-copy>p{min-height:44px;line-height:1.8}
+.storefront .product-bottom{align-items:stretch;flex-direction:column;gap:9px}
+.storefront .product-bottom>div{min-height:42px;font-size:15px;font-weight:700}
+.storefront .product-bottom strong,.storefront .product-bottom .price{font-size:15px;color:#edf3ff}
+.storefront .product-bottom small{font-size:10px;font-weight:400;line-height:1.6;color:#b8c9df}
+.storefront .product-bottom .btn{width:100%;min-height:36px;padding:6px 12px;font-size:12px;background:#2864dc;color:#fff;border:1px solid #4483ed}
+@media(min-width:1000px) and (max-height:780px){.storefront .product-title{min-height:46px}.storefront .product-copy>p{min-height:0}.storefront .product-bottom{gap:5px;padding-top:7px}.storefront .product-bottom>div{min-height:36px}.storefront .product-title h2{font-size:20px}}
+@media(max-width:600px){header .hems-brand img{width:42px;height:42px}.storefront .product-title{min-height:0}.storefront .product-copy>p{min-height:0}}
+
+.storefront .product-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.storefront .product-actions .btn{padding:6px;font-size:11px;white-space:nowrap}.storefront .product-actions .btn.secondary{background:transparent;border-color:#6598df;color:#d7e8ff}.storefront .product-title h2 a:hover{color:#9cc6ff}
+
+/* One clear contact action in the page header. */
+header .navlinks a.header-contact{display:inline-flex;align-items:center;justify-content:center;background:#2563c9;color:#fff;border:1px solid #70a8ff;border-radius:10px;padding:7px 17px;font-weight:800;box-shadow:0 3px 12px #06132640;text-decoration:none;white-space:nowrap}
+header .navlinks a.header-contact:hover{background:#1e51a8;color:#fff}
+header .navlinks a.header-contact:focus-visible{outline:3px solid #b5d8ff;outline-offset:3px}
+.storefront .product-actions{grid-template-columns:1fr}

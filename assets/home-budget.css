@@ -1,0 +1,72 @@
+.budget-page{padding-top:16px;padding-bottom:16px}.budget-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}.budget-heading h1{font-size:26px;margin:0}.budget-heading p{font-size:12px;color:var(--muted);margin:5px 0}.budget-state{font-size:12px;color:#bdd8ff}.budget-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;padding:12px 16px}.budget-controls label{display:grid;gap:5px;font-size:12px;font-weight:700;flex:1;min-width:170px}.budget-controls .btn{white-space:nowrap}.budget-months{padding:10px 16px}.budget-months summary{cursor:pointer;font-size:13px;font-weight:700}.budget-months p,.budget-note{font-size:11px;color:var(--muted);margin:6px 0}.budget-months #monthChoices{display:flex;gap:8px;flex-wrap:wrap}.budget-months label{display:flex;align-items:center;gap:6px;font-size:12px;padding:5px 9px;border:1px solid var(--line);border-radius:7px}.budget-months input{width:16px;min-height:16px;accent-color:#5797ff}.budget-totals{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}.budget-totals>div{padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#122238;font-size:12px}.budget-totals strong{display:block;font-size:22px;color:#b8d6ff;margin-top:3px}.budget-table-card{padding:12px 16px!important}.budget-table-heading{display:flex;align-items:center;justify-content:space-between}.budget-table-heading h2{font-size:18px;margin:0}.budget-table-heading span{font-size:12px}.budget-table-card .table-wrap{max-height:48vh;overflow:auto}.budget-table-card thead th{position:sticky;top:0;z-index:1}.budget-table-card td,.budget-table-card th{padding:7px 9px}.budget-table-card td:first-child{max-width:250px}.budget-table-card input{width:130px;min-height:34px;padding:5px 8px;font-size:13px}.budget-table-card .is-over,.budget-totals .is-over{color:#ffb3b8}.budget-table-card .is-near{color:#ffdc85}.budget-table-card .is-ok{color:#a4e1be}#budgetMessage:empty{display:none}#budgetMessage{font-size:13px;color:#b8eacb}#budgetMessage.error{color:#ffb3b8}.budget-table-card table{min-width:720px}@media(max-width:650px){.budget-totals{grid-template-columns:repeat(2,1fr)}.budget-heading{align-items:start}.budget-heading h1{font-size:22px}.budget-controls .btn{flex:1}.budget-table-card .table-wrap{max-height:none}}
+
+.budget-print-value,.budget-print-summary{display:none}
+.budget-heading #printBudget{margin-inline-start:auto;white-space:nowrap}
+@media print{
+@page{size:A4 landscape;margin:9mm}
+body.budget-app{background:#fff!important;color:#000!important;font-size:10pt;line-height:1.4}
+.budget-app>header,.budget-app .budget-controls,.budget-app .budget-months,.budget-app #budgetMessage,.budget-app #printBudget,.budget-app .budget-table-card input,.budget-app .budget-table-card>.budget-note,.budget-app main>.budget-note{display:none!important}
+.budget-app main.wrap{width:100%;max-width:none;padding:0}
+.budget-app .budget-heading{margin:0 0 5mm}.budget-app .budget-heading h1{font-size:20pt}.budget-app .budget-heading p{display:none}
+.budget-app .budget-state{color:#000;font-size:10pt}
+.budget-app .budget-print-summary{display:block;margin:0 0 4mm;font-size:9pt;color:#000}
+.budget-app .budget-totals{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:0 0 4mm;break-inside:avoid}
+.budget-app .budget-totals>div{background:#fff;border:1px solid #999;padding:2mm 3mm;color:#000;font-size:9pt}
+.budget-app .budget-totals strong{font-size:14pt;color:#000;margin:1mm 0 0}
+.budget-app .budget-table-card{border:0;margin:0;padding:0!important;background:#fff;color:#000}
+.budget-app .budget-table-heading{margin-bottom:3mm}.budget-app .budget-table-heading h2{font-size:13pt}
+.budget-app .table-wrap{overflow:visible;max-height:none}
+.budget-app .budget-table-card table{width:100%;min-width:0;table-layout:fixed;font-size:10pt}
+.budget-app .budget-table-card th,.budget-app .budget-table-card td{padding:2mm;border:1px solid #aaa;color:#000!important;background:#fff!important;vertical-align:middle}
+.budget-app .budget-table-card th:first-child,.budget-app .budget-table-card td:first-child{width:27%}
+.budget-app .budget-table-card th:last-child,.budget-app .budget-table-card td:last-child{width:19%}
+.budget-app .budget-table-card thead th{position:static}
+.budget-app .budget-print-value{display:inline;font-weight:700}
+.budget-app .budget-table-card td:not(:first-child){font-weight:700}
+.budget-app tr{break-inside:avoid}
+}
+@media(max-width:650px){.budget-heading{flex-wrap:wrap}.budget-heading #printBudget{font-size:11px;min-height:34px;padding:5px 10px}}
+
+/* Use the same compact layout when measuring the page before printing. */
+
+body.budget-app.budget-print-layout{background:#fff!important;color:#000!important;font-size:10pt;line-height:1.4}
+.budget-app.budget-print-layout>header,.budget-app.budget-print-layout .budget-controls,.budget-app.budget-print-layout .budget-months,.budget-app.budget-print-layout #budgetMessage,.budget-app.budget-print-layout #printBudget,.budget-app.budget-print-layout .budget-table-card input,.budget-app.budget-print-layout .budget-table-card>.budget-note,.budget-app.budget-print-layout main>.budget-note{display:none!important}
+.budget-app.budget-print-layout main.wrap{width:100%;max-width:none;padding:0}
+.budget-app.budget-print-layout .budget-heading{margin:0 0 5mm}.budget-app.budget-print-layout .budget-heading h1{font-size:20pt}.budget-app.budget-print-layout .budget-heading p{display:none}
+.budget-app.budget-print-layout .budget-state{color:#000;font-size:10pt}
+.budget-app.budget-print-layout .budget-print-summary{display:block;margin:0 0 4mm;font-size:9pt;color:#000}
+.budget-app.budget-print-layout .budget-totals{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:0 0 4mm;break-inside:avoid}
+.budget-app.budget-print-layout .budget-totals>div{background:#fff;border:1px solid #999;padding:2mm 3mm;color:#000;font-size:9pt}
+.budget-app.budget-print-layout .budget-totals strong{font-size:14pt;color:#000;margin:1mm 0 0}
+.budget-app.budget-print-layout .budget-table-card{border:0;margin:0;padding:0!important;background:#fff;color:#000}
+.budget-app.budget-print-layout .budget-table-heading{margin-bottom:3mm}.budget-app.budget-print-layout .budget-table-heading h2{font-size:13pt}
+.budget-app.budget-print-layout .table-wrap{overflow:visible;max-height:none}
+.budget-app.budget-print-layout .budget-table-card table{width:100%;min-width:0;table-layout:fixed;font-size:10pt}
+.budget-app.budget-print-layout .budget-table-card th,.budget-app.budget-print-layout .budget-table-card td{padding:2mm;border:1px solid #aaa;color:#000!important;background:#fff!important;vertical-align:middle}
+.budget-app.budget-print-layout .budget-table-card th:first-child,.budget-app.budget-print-layout .budget-table-card td:first-child{width:27%}
+.budget-app.budget-print-layout .budget-table-card th:last-child,.budget-app.budget-print-layout .budget-table-card td:last-child{width:19%}
+.budget-app.budget-print-layout .budget-table-card thead th{position:static}
+.budget-app.budget-print-layout .budget-print-value{display:inline;font-weight:700}
+.budget-app.budget-print-layout .budget-table-card td:not(:first-child){font-weight:700}
+.budget-app.budget-print-layout tr{break-inside:avoid}
+
+
+@media print{
+@page{size:A4 landscape;margin:8mm}
+html:has(body.budget-app),body.budget-app{margin:0;padding:0;height:auto;min-height:0}
+.budget-app .budget-heading{margin-bottom:2mm}.budget-app .budget-heading h1{font-size:17pt}
+.budget-app .budget-print-summary{margin-bottom:2mm;font-size:8pt}
+.budget-app .budget-totals{gap:2mm;margin-bottom:2mm}
+.budget-app .budget-totals>div{padding:1mm 2mm}.budget-app .budget-totals strong{font-size:12pt}
+.budget-app .budget-table-heading{margin-bottom:2mm}
+.budget-app .budget-table-card th,.budget-app .budget-table-card td{padding:1.1mm 1.5mm;line-height:1.25}
+.budget-app main.budget-page{break-inside:avoid;page-break-inside:avoid}
+}
+body.budget-app.budget-print-layout .budget-heading{margin-bottom:2mm}
+body.budget-app.budget-print-layout .budget-heading h1{font-size:17pt}
+body.budget-app.budget-print-layout .budget-print-summary{margin-bottom:2mm;font-size:8pt}
+body.budget-app.budget-print-layout .budget-totals{gap:2mm;margin-bottom:2mm}
+body.budget-app.budget-print-layout .budget-totals>div{padding:1mm 2mm}
+body.budget-app.budget-print-layout .budget-totals strong{font-size:12pt}
+body.budget-app.budget-print-layout .budget-table-heading{margin-bottom:2mm}
+body.budget-app.budget-print-layout .budget-table-card th,body.budget-app.budget-print-layout .budget-table-card td{padding:1.1mm 1.5mm;line-height:1.25}
